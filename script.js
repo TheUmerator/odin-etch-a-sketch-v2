@@ -1,4 +1,3 @@
-console.log('and were live')
 
 squareContainer=document.querySelector('.square-container');
 // https://fonts.google.com/specimen/Cedarville+Cursive
@@ -9,11 +8,14 @@ squareDiv.classList.add('square-div');
 
 squareContainer.appendChild(squareDiv);
 
-// squareDiv.addEventListener('mouseover',()=>{squareDiv.classList.add('hovered')})
+
 }
 
 const squareDivs=document.querySelectorAll('.square-div');
+const createBtn=document.querySelector('.create');
+const clearBtn=document.querySelector('.clear');
 
 squareDivs.forEach(squareDiv => {
     squareDiv.addEventListener('mouseover',()=>{squareDiv.classList.add('hovered')})
+    clearBtn.addEventListener('click',()=>{squareDiv.classList.remove('hovered')})
 });
